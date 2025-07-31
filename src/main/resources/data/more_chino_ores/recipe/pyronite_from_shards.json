@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "A": {
+            "item": "more_chino_ores:pyronite_shard"
+        }
+    },
+    "pattern":[
+        "AAA",
+        "AAA",
+        "AAA"
+    ],
+    "result": {
+        "count": 1,
+        "id": "more_chino_ores:pyronite"
+    }
+}

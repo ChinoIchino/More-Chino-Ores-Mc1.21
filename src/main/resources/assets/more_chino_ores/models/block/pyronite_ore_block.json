@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures":{
+        "all": "more_chino_ores:block/pyronite_ore_block"
+    }
+}

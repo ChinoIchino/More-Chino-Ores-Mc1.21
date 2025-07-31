@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "more_chino_ores:pyronite_block"
+        }
+    ],
+    "result": {
+        "count": 4,
+        "id": "more_chino_ores:pyronite"
+    }
+}

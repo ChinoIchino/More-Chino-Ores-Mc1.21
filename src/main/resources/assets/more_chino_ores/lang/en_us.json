@@ -1,0 +1,17 @@
+{
+    "item.more_chino_ores.pyronite": "Pyronite",
+    "item.more_chino_ores.pyronite_raw": "Raw Pyronite",
+    "item.more_chino_ores.pyronite_shard": "Pyronite Shard",
+    "item.more_chino_ores.pyronite_stick": "Pyronite Stick",
+
+    "item.more_chino_ores.pyronite_sword": "Pyronite Sword",
+    "item.more_chino_ores.pyronite_pickaxe": "Pyronite Pickaxe",
+    "item.more_chino_ores.pyronite_axe": "Pyronite Axe",
+
+    "block.more_chino_ores.pyronite_ore_block": "Pyronite Block",
+    "block.more_chino_ores.pyronite_block": "Compacted Pyronite Block",
+    "block.more_chino_ores.pyronite_deepslate_ore": "Deepslate Pyronite Ore Block",
+
+    "creativetab.more_creative_ores.pyronite_items": "More Chino Ores Items",
+    "creativetab.more_creative_ores.pyronite_blocks": "More Chino Ores Blocks"
+}

@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "":{
+            "model": "more_chino_ores:block/pyronite_ore_block"
+        }
+    }
+}
