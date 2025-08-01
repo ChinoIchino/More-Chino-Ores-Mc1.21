@@ -1,0 +1,27 @@
+{
+  "remove": [
+    "#more_chino_ores:needs_pyronite_tool"
+  ],
+  "values": [
+    "minecraft:stone",
+    "minecraft:cobblestone",
+    "minecraft:mossy_cobblestone",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:granite",
+    "minecraft:deepslate",
+    "minecraft:tuff",
+    "minecraft:tuff_brick_stairs",
+    "minecraft:tuff_brick_slab",
+    "minecraft:tuff_brick_wall",
+    "minecraft:polished_tuff",
+    "minecraft:polished_tuff_slab",
+    "minecraft:polished_tuff_stairs",
+    "minecraft:polished_tuff_wall",
+    "minecraft:chiseled_tuff",
+    "minecraft:chiseled_tuff_bricks",
+    "minecraft:calcite",
+    "minecraft:dripstone_block",
+    "minecraft:smooth_basalt"
+  ]
+}

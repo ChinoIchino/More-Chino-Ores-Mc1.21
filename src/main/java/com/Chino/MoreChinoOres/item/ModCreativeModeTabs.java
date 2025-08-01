@@ -1,7 +1,6 @@
 package com.Chino.MoreChinoOres.item;
 
 import com.Chino.MoreChinoOres.MoreChinoOresApp;
-import com.Chino.MoreChinoOres.item.ModItems;
 import com.Chino.MoreChinoOres.block.ModBlocks;
 
 import net.minecraft.core.registries.Registries;

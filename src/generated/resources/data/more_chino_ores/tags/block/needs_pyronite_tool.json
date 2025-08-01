@@ -1,0 +1,11 @@
+{
+  "values": [
+    "more_chino_ores:pyronite_block",
+    "more_chino_ores:pyronite_ore_block",
+    "more_chino_ores:pyronite_deepslate_ore",
+    "minecraft:soul_sand",
+    "minecraft:soul_soil",
+    "minecraft:magma_block",
+    "#minecraft:needs_iron_tool"
+  ]
+}

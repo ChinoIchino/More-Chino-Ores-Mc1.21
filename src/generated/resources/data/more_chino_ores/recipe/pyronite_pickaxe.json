@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "more_chino_ores:pyronite"
+    },
+    "B": {
+      "item": "more_chino_ores:pyronite_stick"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " B ",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_chino_ores:pyronite_pickaxe"
+  }
+}
