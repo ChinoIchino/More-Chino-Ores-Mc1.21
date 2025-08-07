@@ -1,0 +1,33 @@
+{
+    "item.more_chino_ores.pyronite": "Pyronite",
+    "item.more_chino_ores.pyronite_raw": "Raw Pyronite",
+    "item.more_chino_ores.pyronite_shard": "Pyronite Shard",
+    "item.more_chino_ores.pyronite_stick": "Pyronite Stick",
+
+    "item.more_chino_ores.pyronite_sword": "§4Pyronite Sword§r",
+    "item.more_chino_ores.pyronite_pickaxe": "§4Pyronite Pickaxe§r",
+    "item.more_chino_ores.pyronite_axe": "§4Pyronite Axe§r",
+
+    "item.more_chino_ores.pyronite_helmet": "§cPyronite Helmet§r",
+    "item.more_chino_ores.pyronite_chestplate": "§cPyronite Chestplate§r",
+    "item.more_chino_ores.pyronite_leggings": "§cPyronite Leggings§r",
+    "item.more_chino_ores.pyronite_boots": "§cPyronite Boots§r",
+
+    "block.more_chino_ores.pyronite_ore_block": "Pyronite Block",
+    "block.more_chino_ores.pyronite_block": "Compacted Pyronite Block",
+    "block.more_chino_ores.pyronite_deepslate_ore": "Deepslate Pyronite Ore Block",
+
+    "creativetab.more_creative_ores.pyronite_items": "More Chino Ores Items",
+    "creativetab.more_creative_ores.pyronite_blocks": "More Chino Ores Blocks",
+
+    "tooltip.more_chino_ores.pyronite_pickaxe.shift_up": "Press §eShift§r for more information",
+    "tooltip.more_chino_ores.pyronite_pickaxe.shift_down": "A stange pickaxe, useless in the §2overworld§r, but excel in the §4nether§r",
+    "tooltip.more_chino_ores.pyronite": "A Strange material that doesn't feel like it belong to this world",
+    "tooltip.more_chino_ores.pyronite_raw": "A redish stone",
+    "tooltip.more_chino_ores.pyronite_shard": "Crushed to little shards",
+    "tooltip.more_chino_ores.pyronite_stick": "This strange stone was infused into this stick", 
+
+    "item.more_chino_ores.red_jelly_spawn_egg": "Red Jelly Spawn Egg",
+    "entity.more_chino_ores.red_jelly": "Red Jelly"
+
+}

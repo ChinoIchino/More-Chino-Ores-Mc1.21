@@ -1,0 +1,77 @@
+// package com.Chino.MoreChinoOres.entity.client;
+
+// import net.minecraft.client.animation.AnimationChannel;
+// import net.minecraft.client.animation.AnimationDefinition;
+// import net.minecraft.client.animation.KeyframeAnimations;
+// import net.minecraft.client.animation.Keyframe;
+
+// public class RedJellyAnimations{
+
+// public static final AnimationDefinition ANIMATION_RED_JELLY_JUMP = AnimationDefinition.Builder.withLength(1.3433333f)
+// .addAnimation("Layers",
+// 	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+// 		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 16f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(0.16766666f, KeyframeAnimations.posVec(0f, -1f, 16f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(0.2916767f, KeyframeAnimations.posVec(0f, -2f, 16f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(0.4167667f, KeyframeAnimations.posVec(0f, -4f, 16f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(0.625f, KeyframeAnimations.posVec(0f, -4f, 16f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(0.7083434f, KeyframeAnimations.posVec(0f, 15f, 9f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(0.8343334f, KeyframeAnimations.posVec(0f, 23f, -4f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(1f, KeyframeAnimations.posVec(0f, 20f, -17f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(1.1676667f, KeyframeAnimations.posVec(0f, 11f, -26f),
+// 			AnimationChannel.Interpolations.LINEAR), 
+// 		new Keyframe(1.3433333f, KeyframeAnimations.posVec(0f, 0f, -33f),
+// 			AnimationChannel.Interpolations.LINEAR)))
+// .addAnimation("Layers",
+// 	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+// 		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.16766666f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.2916767f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.4167667f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.625f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.7083434f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.8343334f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(1f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(1.1676667f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(1.3433333f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+// 			AnimationChannel.Interpolations.LINEAR)))
+// .addAnimation("Layers",
+// 	new AnimationChannel(AnimationChannel.Targets.SCALE,
+// 		new Keyframe(0f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.16766666f, KeyframeAnimations.scaleVec(1f, 0.8f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.2916767f, KeyframeAnimations.scaleVec(1f, 0.6f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.4167667f, KeyframeAnimations.scaleVec(1f, 0.4f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.625f, KeyframeAnimations.scaleVec(1f, 0.4f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.7083434f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(0.8343334f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(1f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(1.1676667f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR),
+// 		new Keyframe(1.3433333f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+// 			AnimationChannel.Interpolations.LINEAR))).build();
+// }
