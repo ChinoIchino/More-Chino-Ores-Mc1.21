@@ -31,7 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.PYRONITE_ORE_BLOCK.get(),
                 block -> createOreDrop(ModBlocks.PYRONITE_ORE_BLOCK.get(), ModItems.PYRONITE_RAW.get()));
         this.add(ModBlocks.PYRONITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.PYRONITE_DEEPSLATE_ORE.get(), ModItems.PYRONITE_RAW.get(), 2, 4));
+                block -> createMultipleOreDrops(ModBlocks.PYRONITE_DEEPSLATE_ORE.get(), ModItems.PYRONITE_RAW.get(), 2, 2));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

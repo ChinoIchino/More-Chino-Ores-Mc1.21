@@ -5,6 +5,7 @@ import com.Chino.MoreChinoOres.item.ModCreativeModeTabs;
 import com.Chino.MoreChinoOres.item.ModItems;
 
 import com.mojang.logging.LogUtils;
+
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,7 +55,6 @@ public class MoreChinoOresApp
     private void commonSetup(final FMLCommonSetupEvent event){
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.PYRONITE_RAW);

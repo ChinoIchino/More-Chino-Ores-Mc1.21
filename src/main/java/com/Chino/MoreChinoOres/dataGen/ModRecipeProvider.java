@@ -95,6 +95,34 @@ public class ModRecipeProvider extends RecipeProvider{
             .define('B', ModItems.PYRONITE_STICK.get())
             .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
 
+        //PYRONITE_ARMOR
+        //PYRONITE_HELMET
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.PYRONITE_HELMET.get())
+            .pattern("AAA")
+            .pattern("A A")
+            .define('A', ModItems.PYRONITE.get())
+            .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
+        //PYRONITE_CHESTPLATE
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.PYRONITE_CHESTPLATE.get())
+            .pattern("A A")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', ModItems.PYRONITE.get())
+            .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
+        //PYRONITE_LEGGINGS
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.PYRONITE_LEGGINGS.get())
+            .pattern("AAA")
+            .pattern("A A")
+            .pattern("A A")
+            .define('A', ModItems.PYRONITE.get())
+            .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
+        //PYRONITE_BOOTS
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.PYRONITE_BOOTS.get())
+            .pattern("A A")
+            .pattern("A A")
+            .define('A', ModItems.PYRONITE.get())
+            .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
+
         //SMELTING AND BLASTING
         List<ItemLike> PYRONITE_SMELTABLES = List.of(ModItems.PYRONITE_RAW.get());
 

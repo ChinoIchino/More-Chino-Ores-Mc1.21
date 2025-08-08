@@ -34,6 +34,12 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.PYRONITE_SWORD.get());
                 output.accept(ModItems.PYRONITE_PICKAXE.get());
                 output.accept(ModItems.PYRONITE_AXE.get());
+
+                //Armor
+                output.accept(ModItems.PYRONITE_HELMET.get());
+                output.accept(ModItems.PYRONITE_CHESTPLATE.get());
+                output.accept(ModItems.PYRONITE_LEGGINGS.get());
+                output.accept(ModItems.PYRONITE_BOOTS.get());
             })
         .build());
 
