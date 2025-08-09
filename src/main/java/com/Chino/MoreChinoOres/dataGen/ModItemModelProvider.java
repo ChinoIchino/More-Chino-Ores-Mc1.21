@@ -43,8 +43,20 @@ public class ModItemModelProvider extends ItemModelProvider{
         basicItem(ModItems.PYRONITE_RAW.get());
         basicItem(ModItems.PYRONITE_SHARD.get());
         basicItem(ModItems.PYRONITE_STICK.get());
+        basicItem(ModItems.CONTAINER_EMPTY.get());
+        basicItem(ModItems.CONTAINER_FULL_FIRE.get());
+        basicItem(ModItems.CONTAINER_FULL_WITHER.get());
+        basicItem(ModItems.CONTAINER_FULL_SLOWNESS.get());
+        basicItem(ModItems.SHARD_FIRE.get());
+        basicItem(ModItems.SHARD_WITHER.get());
+        basicItem(ModItems.SHARD_SLOWNESS.get());
 
-        handHeldItem(ModItems.PYRONITE_SWORD);
+        //Sword Modifiers
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_FIRE);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_WITHER);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_SLOWNESS);
+        
+        handHeldItem(ModItems.PYRONITE_SWORD);        
         handHeldItem(ModItems.PYRONITE_PICKAXE);
         handHeldItem(ModItems.PYRONITE_AXE);
 

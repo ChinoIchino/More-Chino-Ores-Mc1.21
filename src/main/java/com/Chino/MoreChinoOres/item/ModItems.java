@@ -5,6 +5,9 @@ import java.util.List;
 import com.Chino.MoreChinoOres.MoreChinoOresApp;
 import com.Chino.MoreChinoOres.item.custom.ModArmorItem;
 import com.Chino.MoreChinoOres.item.custom.PyronitePickaxeItem;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierFire;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierSlowness;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierWither;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ArmorItem;
@@ -14,7 +17,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -61,9 +63,82 @@ public class ModItems{
         }
     });
 
+    //Containers for modifiers
+    public static final RegistryObject<Item> CONTAINER_EMPTY = ITEMS.register("container_empty", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_empty"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> CONTAINER_FULL_FIRE = ITEMS.register("container_full_fire", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_full_fire"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> CONTAINER_FULL_WITHER = ITEMS.register("container_full_wither", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_full_wither"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> CONTAINER_FULL_SLOWNESS = ITEMS.register("container_full_slowness", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_full_slowness"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+
+    //Shards
+    public static final RegistryObject<Item> SHARD_FIRE = ITEMS.register("shard_fire", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_fire"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> SHARD_WITHER = ITEMS.register("shard_wither", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_wither"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> SHARD_SLOWNESS = ITEMS.register("shard_slowness", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_slowness"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+
     //Tools
     public static final RegistryObject<Item> PYRONITE_SWORD = ITEMS.register("pyronite_sword",
         () -> new SwordItem(ModToolTiers.PYRONITE, new Item.Properties()
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_FIRE = ITEMS.register("pyronite_sword_modifier_fire",
+        () -> new PyroniteSwordModifierFire(ModToolTiers.PYRONITE, new Item.Properties()
+        .stacksTo(4)
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_WITHER = ITEMS.register("pyronite_sword_modifier_wither",
+        () -> new PyroniteSwordModifierWither(ModToolTiers.PYRONITE, new Item.Properties()
+        .stacksTo(2)
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_SLOWNESS = ITEMS.register("pyronite_sword_modifier_slowness",
+        () -> new PyroniteSwordModifierSlowness(ModToolTiers.PYRONITE, new Item.Properties()
+        .stacksTo(1)
         .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
 
     public static final RegistryObject<Item> PYRONITE_PICKAXE = ITEMS.register("pyronite_pickaxe", 

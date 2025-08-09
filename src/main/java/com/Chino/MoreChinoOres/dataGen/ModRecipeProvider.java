@@ -38,7 +38,7 @@ public class ModRecipeProvider extends RecipeProvider{
             .pattern(" A ")
             .define('A', ModItems.PYRONITE_SHARD.get())
             .define('B', Items.STICK)
-            .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
+            .unlockedBy(getHasName(ModItems.PYRONITE_SHARD.get()), has(ModItems.PYRONITE_SHARD.get())).save(pRecipeOutput);
         //PYRONITE_FROM_PYRONITE_BLOCK
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PYRONITE.get(), 9)
             .requires(ModBlocks.PYRONITE_BLOCK.get(), 1)
@@ -58,6 +58,45 @@ public class ModRecipeProvider extends RecipeProvider{
             .requires(ModItems.PYRONITE.get())
             .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
 
+        //CONTAINERS
+        //CONTAINER EMPTY
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_EMPTY.get(), 1)
+            .pattern(" B ")
+            .pattern("ACA")
+            .pattern(" B ")
+            .define('A', Items.DIAMOND)
+            .define('B', Items.COPPER_BLOCK)
+            .define('C', Items.GLASS)
+            .unlockedBy(getHasName(ModItems.PYRONITE_SWORD.get()), has(ModItems.PYRONITE_SWORD.get())).save(pRecipeOutput);
+        //CONTAINER WITH FIRE SHARD
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_FULL_FIRE.get(), 1)
+            .pattern("ACA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', Items.BLAZE_ROD)
+            .define('B', ModItems.CONTAINER_EMPTY.get())
+            .define('C', ModItems.SHARD_FIRE.get())
+            .unlockedBy(getHasName(ModItems.SHARD_FIRE.get()), has(ModItems.SHARD_FIRE.get())).save(pRecipeOutput);
+        //CONTAINER WITH WITHER SHARD
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_FULL_WITHER.get(), 1)
+            .pattern("AAA")
+            .pattern("BCD")
+            .pattern("EEE")
+            .define('A', Items.BONE)
+            .define('B', Items.WITHER_SKELETON_SKULL)
+            .define('C', ModItems.CONTAINER_EMPTY.get())
+            .define('D', ModItems.SHARD_WITHER.get())
+            .define('E', Items.SOUL_SAND)
+            .unlockedBy(getHasName(ModItems.SHARD_WITHER.get()), has(ModItems.SHARD_WITHER.get())).save(pRecipeOutput);
+        //CONTAINER WITH SLOWNESS SHARD
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_FULL_SLOWNESS.get(), 1)
+            .pattern("ACA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', Items.ROTTEN_FLESH)
+            .define('B', ModItems.CONTAINER_EMPTY.get())
+            .define('C', ModItems.SHARD_SLOWNESS.get())
+            .unlockedBy(getHasName(ModItems.SHARD_SLOWNESS.get()), has(ModItems.SHARD_SLOWNESS.get())).save(pRecipeOutput);
         //Blocks
         //PYRONITE_BLOCK
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PYRONITE_BLOCK.get())
@@ -78,6 +117,21 @@ public class ModRecipeProvider extends RecipeProvider{
             .define('A', ModItems.PYRONITE.get())
             .define('B', ModItems.PYRONITE_STICK.get())
             .unlockedBy(getHasName(ModItems.PYRONITE.get()), has(ModItems.PYRONITE.get())).save(pRecipeOutput);
+        //PYRONITE_SWORD_FIRE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ModItems.PYRONITE_SWORD_MODIFIER_FIRE.get())
+            .requires(ModItems.CONTAINER_FULL_FIRE.get(), 1)
+            .requires(ModItems.PYRONITE_SWORD.get(), 1)
+            .unlockedBy(getHasName(ModItems.SHARD_FIRE.get()), has(ModItems.SHARD_FIRE.get())).save(pRecipeOutput);
+        //PYRONITE_SWORD_WITHER
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ModItems.PYRONITE_SWORD_MODIFIER_WITHER.get())
+            .requires(ModItems.CONTAINER_FULL_WITHER.get(), 1)
+            .requires(ModItems.PYRONITE_SWORD.get(), 1)
+            .unlockedBy(getHasName(ModItems.SHARD_WITHER.get()), has(ModItems.SHARD_WITHER.get())).save(pRecipeOutput);
+        //PYRONITE_SWORD_SLOWNESS
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ModItems.PYRONITE_SWORD_MODIFIER_SLOWNESS.get())
+            .requires(ModItems.CONTAINER_FULL_SLOWNESS.get(), 1)
+            .requires(ModItems.PYRONITE_SWORD.get(), 1)
+            .unlockedBy(getHasName(ModItems.SHARD_SLOWNESS.get()), has(ModItems.SHARD_SLOWNESS.get())).save(pRecipeOutput);
         //PYRONITE_PICKAXE
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.PYRONITE_PICKAXE.get())
             .pattern("AAA")
