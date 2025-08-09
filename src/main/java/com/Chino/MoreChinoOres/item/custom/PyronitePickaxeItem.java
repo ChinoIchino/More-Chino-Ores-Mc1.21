@@ -29,12 +29,12 @@ public class PyronitePickaxeItem extends PickaxeItem{
     
     @Override
         public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
-            if(Screen.hasShiftDown()){
-                //for line break, just need to add another component
-                toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.pyronite_pickaxe.shift_down"));
-            }else{
-                toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.pyronite_pickaxe.shift_up"));
-            }
+        if(Screen.hasShiftDown()){
+            //for line break, just need to add another component
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.pyronite_pickaxe.shift_down"));
+        }else{
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shift_up"));
+        }
             super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
         }
 }

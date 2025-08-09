@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "more_chino_ores:container_full_slowness"
+    },
+    {
+      "item": "more_chino_ores:pyronite_sword"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_chino_ores:pyronite_sword_modifier_slowness"
+  }
+}

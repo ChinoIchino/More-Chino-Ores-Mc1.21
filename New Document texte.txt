@@ -1,0 +1,16 @@
+Pyronite
+empire escalation
+
+
+Container empty + gem + other = Container full 
+
+
+Container full + Applier + Pyronite sword
+
+ABA
+ C
+ABA
+
+A = diam
+B = Copper Block
+C = Glass

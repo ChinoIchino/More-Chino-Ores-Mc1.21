@@ -29,9 +29,23 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.PYRONITE_SHARD.get());
                 output.accept(ModItems.PYRONITE.get());
                 output.accept(ModItems.PYRONITE_STICK.get());
+
+                //Containers
+                output.accept(ModItems.CONTAINER_EMPTY.get());
+                output.accept(ModItems.CONTAINER_FULL_FIRE.get());
+                output.accept(ModItems.CONTAINER_FULL_WITHER.get());
+                output.accept(ModItems.CONTAINER_FULL_SLOWNESS.get());
+
+                //Shards
+                output.accept(ModItems.SHARD_FIRE.get());
+                output.accept(ModItems.SHARD_WITHER.get());
+                output.accept(ModItems.SHARD_SLOWNESS.get());
                 
                 //Tools
                 output.accept(ModItems.PYRONITE_SWORD.get());
+                output.accept(ModItems.PYRONITE_SWORD_MODIFIER_FIRE.get());
+                output.accept(ModItems.PYRONITE_SWORD_MODIFIER_WITHER.get());
+                output.accept(ModItems.PYRONITE_SWORD_MODIFIER_SLOWNESS.get());
                 output.accept(ModItems.PYRONITE_PICKAXE.get());
                 output.accept(ModItems.PYRONITE_AXE.get());
 

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pyronite_shard": {
+    "has_shard_slowness": {
       "conditions": {
         "items": [
           {
-            "items": "more_chino_ores:pyronite_shard"
+            "items": "more_chino_ores:shard_slowness"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_chino_ores:pyronite_stick"
+        "recipe": "more_chino_ores:container_full_slowness"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pyronite_shard"
+      "has_shard_slowness"
     ]
   ],
   "rewards": {
     "recipes": [
-      "more_chino_ores:pyronite_stick"
+      "more_chino_ores:container_full_slowness"
     ]
   }
 }
