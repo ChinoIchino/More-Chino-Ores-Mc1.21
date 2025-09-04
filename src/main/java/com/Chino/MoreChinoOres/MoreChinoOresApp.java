@@ -1,9 +1,10 @@
 package com.Chino.MoreChinoOres;
 
 import com.Chino.MoreChinoOres.block.ModBlocks;
+import com.Chino.MoreChinoOres.effect.ModEffects;
 import com.Chino.MoreChinoOres.item.ModCreativeModeTabs;
 import com.Chino.MoreChinoOres.item.ModItems;
-
+import com.Chino.MoreChinoOres.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.world.item.CreativeModeTabs;
@@ -44,6 +45,10 @@ public class MoreChinoOresApp
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
