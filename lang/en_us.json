@@ -50,7 +50,7 @@
     "tooltip.more_chino_ores.pyronite_sword_modifier_test_purpose.shift_down" : "§b[On Target]§r : Send A Lightning Bolt On Right Click (can be used every 5th hit)",
     "tooltip.more_chino_ores.pyronite_sword_modifier_wind.shift_down": "§b[On Target]§r : \n   -1/5 Chance To Apply Winded Effect For 3 Seconds\n§b[On User]§r :\n    -1/5 Chance To Apply Speed 1 For 3 Seconds\n    -1/5 Chance To Stop Burning",
     "tooltip.more_chino_ores.pyronite_pickaxe.shift_down": "A strange pickaxe, useless in the §2overworld§r, but excel in the §4nether§r",
-    "tooltip.more_chino_ores.tier1_blindfold.shift_down": "Obstruct most of your vision, the obstructed vision should scare you, but it give you a sense of security that you didnt felt for a long time.\nWhile used give the faint chance to drop §kelemental shards§r",
+    "tooltip.more_chino_ores.tier1_blindfold.shift_down": "Obstruct most of your vision, the obstructed vision should scare you, but it give you a sense of security that you didnt felt for a long time.\nWhile used give you the ability to drop §kelemental shards§r",
     "tooltip.more_chino_ores.pyronite": "A Strange material that doesn't feel like it belong to this world",
     "tooltip.more_chino_ores.pyronite_raw": "A redish stone",
     "tooltip.more_chino_ores.pyronite_shard": "Crushed to little shards",

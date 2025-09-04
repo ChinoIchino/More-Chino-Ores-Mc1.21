@@ -6,9 +6,13 @@ import com.Chino.MoreChinoOres.MoreChinoOresApp;
 import com.Chino.MoreChinoOres.item.custom.ModArmorItem;
 import com.Chino.MoreChinoOres.item.custom.PyronitePickaxeItem;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierFire;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierRegeneration;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierSlowness;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierTest;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierWind;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierWither;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
@@ -96,6 +100,15 @@ public class ModItems{
             super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
         }
     });
+    public static final RegistryObject<Item> CONTAINER_FULL_WIND = ITEMS.register("container_full_wind", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_full_wind"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    
 
     //Shards
     public static final RegistryObject<Item> SHARD_FIRE = ITEMS.register("shard_fire", () -> new Item(new Item.Properties()){
@@ -122,6 +135,14 @@ public class ModItems{
             super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
         }
     });
+        public static final RegistryObject<Item> SHARD_WIND = ITEMS.register("shard_wind", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_wind"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
 
     //Tools
     public static final RegistryObject<Item> PYRONITE_SWORD = ITEMS.register("pyronite_sword",
@@ -139,6 +160,16 @@ public class ModItems{
     public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_SLOWNESS = ITEMS.register("pyronite_sword_modifier_slowness",
         () -> new PyroniteSwordModifierSlowness(ModToolTiers.PYRONITE, new Item.Properties()
         .stacksTo(1)
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_REGENERATION = ITEMS.register("pyronite_sword_modifier_regeneration",
+        () -> new PyroniteSwordModifierRegeneration(ModToolTiers.PYRONITE, new Item.Properties()
+        .stacksTo(1)
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_TESTPURPOSE = ITEMS.register("pyronite_sword_modifier_test_purpose", 
+        () -> new PyroniteSwordModifierTest(ModToolTiers.PYRONITE, new Item.Properties()
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_WIND = ITEMS.register("pyronite_sword_modifier_wind", 
+        () -> new PyroniteSwordModifierWind(ModToolTiers.PYRONITE, new Item.Properties()
         .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
 
     public static final RegistryObject<Item> PYRONITE_PICKAXE = ITEMS.register("pyronite_pickaxe", 
@@ -163,6 +194,20 @@ public class ModItems{
                     super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
                 }
             });
+
+    public static final RegistryObject<Item> RAG_BLINDFOLD = ITEMS.register("rag_blindfold", 
+    () -> new ModArmorItem(ModArmorMaterials.TIER1_BLINDFOLD, ArmorItem.Type.HELMET,
+        new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))){
+            @Override
+            public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+                if(Screen.hasShiftDown()){
+                    toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.tier1_blindfold.shift_down"));
+                }else{
+                    toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shift_up"));
+            }
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
 
     public static final RegistryObject<Item> PYRONITE_CHESTPLATE = ITEMS.register("pyronite_chestplate",
         () -> new ArmorItem(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,

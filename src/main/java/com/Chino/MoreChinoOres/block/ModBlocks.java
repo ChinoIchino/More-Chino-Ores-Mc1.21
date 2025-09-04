@@ -23,11 +23,11 @@ public class ModBlocks {
     static final float resistanceOfPyroniteDeepslateBlock = 5f;
 
     //the min and max ammount of the raw material dropped
-    static final int minRawOreDrop = 2;
-    static final int maxRawOreDrop = 4;
+    static final int minRawOreDrop = 1;
+    static final int maxRawOreDrop = 2;
 
-    static final int minRawDeepslateOreDrop = 3;
-    static final int maxRawDeepslateOreDrop = 5;
+    static final int minRawDeepslateOreDrop = 2;
+    static final int maxRawDeepslateOreDrop = 3;
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MoreChinoOresApp.MODID);
 

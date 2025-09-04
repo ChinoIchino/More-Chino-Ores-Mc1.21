@@ -97,6 +97,15 @@ public class ModRecipeProvider extends RecipeProvider{
             .define('B', ModItems.CONTAINER_EMPTY.get())
             .define('C', ModItems.SHARD_SLOWNESS.get())
             .unlockedBy(getHasName(ModItems.SHARD_SLOWNESS.get()), has(ModItems.SHARD_SLOWNESS.get())).save(pRecipeOutput);
+        //CONTAINER WITH WIND SHARD
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_FULL_WIND.get(), 1)
+            .pattern("ACA") //Phantom Membrane
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', Items.PHANTOM_MEMBRANE)
+            .define('B', ModItems.CONTAINER_EMPTY.get())
+            .define('C', ModItems.SHARD_WIND.get())
+            .unlockedBy(getHasName(ModItems.SHARD_WIND.get()), has(ModItems.SHARD_WIND.get())).save(pRecipeOutput);
         //Blocks
         //PYRONITE_BLOCK
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PYRONITE_BLOCK.get())
@@ -132,6 +141,11 @@ public class ModRecipeProvider extends RecipeProvider{
             .requires(ModItems.CONTAINER_FULL_SLOWNESS.get(), 1)
             .requires(ModItems.PYRONITE_SWORD.get(), 1)
             .unlockedBy(getHasName(ModItems.SHARD_SLOWNESS.get()), has(ModItems.SHARD_SLOWNESS.get())).save(pRecipeOutput);
+        //PYRONITE_SWORD_SLOWNESS
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ModItems.PYRONITE_SWORD_MODIFIER_WIND.get())
+            .requires(ModItems.CONTAINER_FULL_WIND.get(), 1)
+            .requires(ModItems.PYRONITE_SWORD.get(), 1)
+            .unlockedBy(getHasName(ModItems.SHARD_WIND.get()), has(ModItems.SHARD_WIND.get())).save(pRecipeOutput);
         //PYRONITE_PICKAXE
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.PYRONITE_PICKAXE.get())
             .pattern("AAA")

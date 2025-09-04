@@ -47,14 +47,19 @@ public class ModItemModelProvider extends ItemModelProvider{
         basicItem(ModItems.CONTAINER_FULL_FIRE.get());
         basicItem(ModItems.CONTAINER_FULL_WITHER.get());
         basicItem(ModItems.CONTAINER_FULL_SLOWNESS.get());
+        basicItem(ModItems.CONTAINER_FULL_WIND.get());
         basicItem(ModItems.SHARD_FIRE.get());
         basicItem(ModItems.SHARD_WITHER.get());
         basicItem(ModItems.SHARD_SLOWNESS.get());
+        basicItem(ModItems.SHARD_WIND.get());
 
         //Sword Modifiers
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_FIRE);
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_WITHER);
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_SLOWNESS);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_REGENERATION);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_TESTPURPOSE);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_WIND);
         
         handHeldItem(ModItems.PYRONITE_SWORD);        
         handHeldItem(ModItems.PYRONITE_PICKAXE);
@@ -64,6 +69,8 @@ public class ModItemModelProvider extends ItemModelProvider{
         trimmedArmorItem(ModItems.PYRONITE_CHESTPLATE);
         trimmedArmorItem(ModItems.PYRONITE_LEGGINGS);
         trimmedArmorItem(ModItems.PYRONITE_BOOTS);
+        trimmedArmorItem(ModItems.RAG_BLINDFOLD);
+        
     }
 
     //used so the item is held in game like a tool
@@ -73,8 +80,10 @@ public class ModItemModelProvider extends ItemModelProvider{
             ResourceLocation.fromNamespaceAndPath(MoreChinoOresApp.MODID, "item/" + item.getId().getPath()));
     }
 
+
+
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MOD_ID = MoreChinoOresApp.MODID; // Change this to your mod id
+        final String MOD_ID = MoreChinoOresApp.MODID;
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {

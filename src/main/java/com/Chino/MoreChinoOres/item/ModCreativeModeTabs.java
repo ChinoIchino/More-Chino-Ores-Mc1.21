@@ -35,17 +35,22 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.CONTAINER_FULL_FIRE.get());
                 output.accept(ModItems.CONTAINER_FULL_WITHER.get());
                 output.accept(ModItems.CONTAINER_FULL_SLOWNESS.get());
+                output.accept(ModItems.CONTAINER_FULL_WIND.get());
 
                 //Shards
                 output.accept(ModItems.SHARD_FIRE.get());
                 output.accept(ModItems.SHARD_WITHER.get());
                 output.accept(ModItems.SHARD_SLOWNESS.get());
+                output.accept(ModItems.SHARD_WIND.get());
                 
                 //Tools
                 output.accept(ModItems.PYRONITE_SWORD.get());
                 output.accept(ModItems.PYRONITE_SWORD_MODIFIER_FIRE.get());
                 output.accept(ModItems.PYRONITE_SWORD_MODIFIER_WITHER.get());
                 output.accept(ModItems.PYRONITE_SWORD_MODIFIER_SLOWNESS.get());
+                output.accept(ModItems.PYRONITE_SWORD_MODIFIER_REGENERATION.get());
+                output.accept(ModItems.PYRONITE_SWORD_MODIFIER_TESTPURPOSE.get());
+                output.accept(ModItems.PYRONITE_SWORD_MODIFIER_WIND.get());
                 output.accept(ModItems.PYRONITE_PICKAXE.get());
                 output.accept(ModItems.PYRONITE_AXE.get());
 
@@ -54,6 +59,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.PYRONITE_CHESTPLATE.get());
                 output.accept(ModItems.PYRONITE_LEGGINGS.get());
                 output.accept(ModItems.PYRONITE_BOOTS.get());
+                output.accept(ModItems.RAG_BLINDFOLD.get());
             })
         .build());
 
