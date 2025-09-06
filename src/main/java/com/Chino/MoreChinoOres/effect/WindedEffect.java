@@ -11,6 +11,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 // import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 
 public class WindedEffect extends MobEffect{
@@ -36,13 +37,14 @@ public class WindedEffect extends MobEffect{
             target.setDeltaMovement(windedRunVX, motionOfTarget.y, windedRunVZ);
         }
 
-        FogHandler.setCustomFog(true);
+        if(target instanceof Player){
+            FogHandler.setCustomFog(true);
+            
+            MobEffectInstance effectInstance = target.getEffect(ModEffects.WINDED_EFFECT.getHolder().get());
 
-        LocalPlayer player = Minecraft.getInstance().player;
-        MobEffectInstance effectInstance = player.getEffect(ModEffects.WINDED_EFFECT.getHolder().get());
-
-        if(effectInstance.getDuration() == 1 || effectInstance.getDuration() == 0){
-            FogHandler.setCustomFog(false);
+            if(effectInstance.getDuration() == 1 || effectInstance.getDuration() == 0){
+                FogHandler.setCustomFog(false);
+            }
         }
 
         return super.applyEffectTick(target, amplifier);
