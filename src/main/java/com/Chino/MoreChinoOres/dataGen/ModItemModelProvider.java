@@ -48,18 +48,23 @@ public class ModItemModelProvider extends ItemModelProvider{
         basicItem(ModItems.CONTAINER_FULL_WITHER.get());
         basicItem(ModItems.CONTAINER_FULL_SLOWNESS.get());
         basicItem(ModItems.CONTAINER_FULL_WIND.get());
+        basicItem(ModItems.CONTAINER_FULL_LIGHTNING.get());
+        // basicItem(ModItems.CONTAINER_FULL_WATER.get());
         basicItem(ModItems.SHARD_FIRE.get());
         basicItem(ModItems.SHARD_WITHER.get());
         basicItem(ModItems.SHARD_SLOWNESS.get());
         basicItem(ModItems.SHARD_WIND.get());
+        basicItem(ModItems.SHARD_LIGHTNING.get());
+        // basicItem(ModItems.SHARD_WATER.get());
 
         //Sword Modifiers
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_FIRE);
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_WITHER);
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_SLOWNESS);
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_REGENERATION);
-        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_TESTPURPOSE);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_LIGHTNING);
         handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_WIND);
+        handHeldItem(ModItems.PYRONITE_SWORD_MODIFIER_WATER);
         
         handHeldItem(ModItems.PYRONITE_SWORD);        
         handHeldItem(ModItems.PYRONITE_PICKAXE);

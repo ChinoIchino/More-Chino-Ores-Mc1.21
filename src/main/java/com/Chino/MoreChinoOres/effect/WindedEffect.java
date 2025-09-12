@@ -2,8 +2,6 @@ package com.Chino.MoreChinoOres.effect;
 
 import com.Chino.MoreChinoOres.util.FogHandler;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
 // import net.minecraft.client.Minecraft;
 // import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.effect.MobEffect;
@@ -39,7 +37,7 @@ public class WindedEffect extends MobEffect{
 
         if(target instanceof Player){
             FogHandler.setCustomFog(true);
-            
+
             MobEffectInstance effectInstance = target.getEffect(ModEffects.WINDED_EFFECT.getHolder().get());
 
             if(effectInstance.getDuration() == 1 || effectInstance.getDuration() == 0){

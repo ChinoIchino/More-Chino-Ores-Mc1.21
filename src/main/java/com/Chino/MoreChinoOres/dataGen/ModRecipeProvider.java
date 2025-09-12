@@ -106,6 +106,25 @@ public class ModRecipeProvider extends RecipeProvider{
             .define('B', ModItems.CONTAINER_EMPTY.get())
             .define('C', ModItems.SHARD_WIND.get())
             .unlockedBy(getHasName(ModItems.SHARD_WIND.get()), has(ModItems.SHARD_WIND.get())).save(pRecipeOutput);
+        //CONTAINER WITH LIGHTNING SHARD
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_FULL_LIGHTNING.get(), 1)
+            .pattern("ACA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', Items.COPPER_INGOT)
+            .define('B', ModItems.CONTAINER_EMPTY.get())
+            .define('C', ModItems.SHARD_LIGHTNING.get())
+            .unlockedBy(getHasName(ModItems.SHARD_LIGHTNING.get()), has(ModItems.SHARD_LIGHTNING.get())).save(pRecipeOutput);
+        //CONTAINER WITH WATER SHARD
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CONTAINER_FULL_WATER.get(), 1)
+            .pattern("ACA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', Items.PRISMARINE_CRYSTALS)
+            .define('B', ModItems.CONTAINER_EMPTY.get())
+            .define('C', ModItems.SHARD_WATER.get())
+            .unlockedBy(getHasName(ModItems.SHARD_WATER.get()), has(ModItems.SHARD_WATER.get())).save(pRecipeOutput);
+
         //Blocks
         //PYRONITE_BLOCK
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PYRONITE_BLOCK.get())
@@ -146,6 +165,17 @@ public class ModRecipeProvider extends RecipeProvider{
             .requires(ModItems.CONTAINER_FULL_WIND.get(), 1)
             .requires(ModItems.PYRONITE_SWORD.get(), 1)
             .unlockedBy(getHasName(ModItems.SHARD_WIND.get()), has(ModItems.SHARD_WIND.get())).save(pRecipeOutput);
+        //PYRONITE_SWORD_LIGHTNING
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ModItems.PYRONITE_SWORD_MODIFIER_LIGHTNING.get())
+            .requires(ModItems.PYRONITE_SWORD.get(), 1)
+            .requires(ModItems.CONTAINER_FULL_LIGHTNING.get(), 1)
+            .unlockedBy(getHasName(ModItems.SHARD_LIGHTNING.get()), has(ModItems.SHARD_LIGHTNING.get())).save(pRecipeOutput);
+        //PYRONITE_SWORD_WATER
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ModItems.PYRONITE_SWORD_MODIFIER_WATER.get())
+            .requires(ModItems.PYRONITE_SWORD.get(), 1)
+            .requires(ModItems.CONTAINER_FULL_WATER.get(), 1)
+            .unlockedBy(getHasName(ModItems.SHARD_WATER.get()), has(ModItems.SHARD_WATER.get())).save(pRecipeOutput);
+            
         //PYRONITE_PICKAXE
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.PYRONITE_PICKAXE.get())
             .pattern("AAA")

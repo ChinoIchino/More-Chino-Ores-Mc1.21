@@ -1,8 +1,9 @@
 package com.Chino.MoreChinoOres.item.custom;
 
-import com.google.common.collect.ImmutableMap;
+// import com.google.common.collect.ImmutableMap;
 import com.Chino.MoreChinoOres.effect.ModEffects;
 import com.Chino.MoreChinoOres.item.ModArmorMaterials;
+
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -12,15 +13,15 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import java.util.List;
-import java.util.Map;
+// import java.util.List;
+// import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
-    private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
-                    .put(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 100, 1, false, false)))
-                    .build();
+    // private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
+    //         (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
+    //                 .put(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL,
+    //                         List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 100, 1, false, false)))
+    //                 .build();
 
     public ModArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {
         super(material, type, properties);
@@ -29,42 +30,32 @@ public class ModArmorItem extends ArmorItem {
     @Override
     public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
         if(!level.isClientSide() && (hasFullSuitOfArmorOn(player) || hasHelmetOn(player))) {
-            evaluateArmorEffects(player);
+            evaluateArmorAndItemEffects(player);
         }
         // else if(!level.isClientSide() && hasHelmetOn(player)){
         //     evaluateArmorEffects(player);
         // }
     }
 
-    private void evaluateArmorEffects(Player player) {
-        for(Map.Entry<Holder<ArmorMaterial>, List<MobEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            //Holder<ArmorMaterial> mapArmorMaterial = entry.getKey();
-            List<MobEffectInstance> mapEffect = entry.getValue();
-
-
-            if(hasPlayerCorrectArmorOn(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL, player) || hasPlayerCorrectHelmetOn(ModArmorMaterials.TIER1_BLINDFOLD, player)) {
-                addEffectToPlayer(player, mapEffect);
+    private void evaluateArmorAndItemEffects(Player player) {
+        if(hasPlayerCorrectArmorOn(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL, player) 
+            || hasPlayerCorrectHelmetOn(ModArmorMaterials.TIER1_BLINDFOLD, player)
+            ) {
+                addEffectToPlayer(player);
             }
-
             // if(hasPlayerCorrectArmorOn(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL, player)) {
             //     addEffectToPlayer(player, mapEffect);
             // }else if(hasPlayerCorrectHelmetOn(ModArmorMaterials.TIER1_BLINDFOLD, player)){
             //     addEffectToPlayer(player, mapEffect);
             // }
-        }
     }
 
-    private void addEffectToPlayer(Player player, List<MobEffectInstance> mapEffect) {
-        boolean hasPlayerEffect = mapEffect.stream().allMatch(effect -> player.hasEffect(effect.getEffect()));
-
+    private void addEffectToPlayer(Player player) {
+        boolean hasPlayerEffect = player.hasEffect(MobEffects.FIRE_RESISTANCE);
         if(!hasPlayerEffect && hasPlayerCorrectArmorOn(ModArmorMaterials.PYRONITE_ARMOR_MATERIAL, player)) {
-            for (MobEffectInstance effect : mapEffect) {
-                player.addEffect(new MobEffectInstance(effect.getEffect(),
-                        effect.getDuration(), effect.getAmplifier(), effect.isAmbient(), effect.isVisible()));
-            }
+            player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 100, 0, false, false));
         }else if(hasPlayerCorrectHelmetOn(ModArmorMaterials.TIER1_BLINDFOLD, player)){
-            player.addEffect(new MobEffectInstance(ModEffects.BLINDNESS_EFFECT.getHolder().get(),
-                10, 0, false, false));
+            player.addEffect(new MobEffectInstance(ModEffects.BLINDNESS_EFFECT.getHolder().get(), 10, 0, false, false));
         }
     }
 

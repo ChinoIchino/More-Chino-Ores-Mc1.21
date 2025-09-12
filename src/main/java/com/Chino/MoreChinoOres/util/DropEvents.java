@@ -44,14 +44,12 @@ public class DropEvents {
                         shardRef = ModItems.SHARD_FIRE;
                         break;
                     case 3:
-                        //TODO need to be changed to the third type of shards
-                        shardRef = ModItems.SHARD_WIND;
+                        shardRef = ModItems.SHARD_LIGHTNING;
                         break;
                     case 4:
-                        //TODO need to be changed to the fourth type of shards
-                        shardRef = ModItems.SHARD_FIRE;
+                        shardRef = ModItems.SHARD_WATER;
                         break;
-                    //default should never happen, but because i have a error im gonna override shardRef here
+                    //default should never happen, but because i have a error im gonna override shardRef here too
                     default:
                         shardRef = ModItems.SHARD_WIND;
                         break;
