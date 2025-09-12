@@ -8,7 +8,8 @@ import com.Chino.MoreChinoOres.item.custom.PyronitePickaxeItem;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierFire;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierRegeneration;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierSlowness;
-import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierTest;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierWater;
+import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierLightning;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierWind;
 import com.Chino.MoreChinoOres.item.custom.PyroniteSwordModifierWither;
 
@@ -108,6 +109,22 @@ public class ModItems{
             super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
         }
     });
+    public static final RegistryObject<Item> CONTAINER_FULL_LIGHTNING = ITEMS.register("container_full_lightning", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_full_lightning"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> CONTAINER_FULL_WATER = ITEMS.register("container_full_water", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.container_full_water"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
     
 
     //Shards
@@ -135,10 +152,26 @@ public class ModItems{
             super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
         }
     });
-        public static final RegistryObject<Item> SHARD_WIND = ITEMS.register("shard_wind", () -> new Item(new Item.Properties()){
+    public static final RegistryObject<Item> SHARD_WIND = ITEMS.register("shard_wind", () -> new Item(new Item.Properties()){
         @Override
         public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
             toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_wind"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> SHARD_LIGHTNING = ITEMS.register("shard_lightning", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_lightning"));
+            
+            super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
+        }
+    });
+    public static final RegistryObject<Item> SHARD_WATER = ITEMS.register("shard_water", () -> new Item(new Item.Properties()){
+        @Override
+        public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> toolTipComponent, TooltipFlag tooltipFlag){
+            toolTipComponent.add(Component.translatable("tooltip.more_chino_ores.shard_water"));
             
             super .appendHoverText(stack, context, toolTipComponent, tooltipFlag);
         }
@@ -165,11 +198,14 @@ public class ModItems{
         () -> new PyroniteSwordModifierRegeneration(ModToolTiers.PYRONITE, new Item.Properties()
         .stacksTo(1)
         .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
-    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_TESTPURPOSE = ITEMS.register("pyronite_sword_modifier_test_purpose", 
-        () -> new PyroniteSwordModifierTest(ModToolTiers.PYRONITE, new Item.Properties()
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_LIGHTNING = ITEMS.register("pyronite_sword_modifier_lightning", 
+        () -> new PyroniteSwordModifierLightning(ModToolTiers.PYRONITE, new Item.Properties()
         .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
     public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_WIND = ITEMS.register("pyronite_sword_modifier_wind", 
         () -> new PyroniteSwordModifierWind(ModToolTiers.PYRONITE, new Item.Properties()
+        .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
+    public static final RegistryObject<Item> PYRONITE_SWORD_MODIFIER_WATER = ITEMS.register("pyronite_sword_modifier_water", 
+        () -> new PyroniteSwordModifierWater(ModToolTiers.PYRONITE, new Item.Properties()
         .attributes(SwordItem.createAttributes(ModToolTiers.PYRONITE, 3, -2.4f))));
 
     public static final RegistryObject<Item> PYRONITE_PICKAXE = ITEMS.register("pyronite_pickaxe", 

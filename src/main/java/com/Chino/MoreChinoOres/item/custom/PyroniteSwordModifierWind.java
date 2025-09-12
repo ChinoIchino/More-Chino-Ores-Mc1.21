@@ -29,7 +29,7 @@ public class PyroniteSwordModifierWind extends SwordItem {
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker){
         int roolForEffectApplied = (int) (Math.random() * 10) + 1;
 
-        //20% chance of apllying winded on target
+        // 20% chance of apllying winded on target
         if(2 >= roolForEffectApplied && (!attacker.level().isClientSide)){
             target.addEffect(new MobEffectInstance(ModEffects.WINDED_EFFECT.getHolder().get(), TICK_DURATION_Of_WINDED, 0, false, true));
         }else if(roolForEffectApplied > 2 && roolForEffectApplied <= 4){ //20% chance to apply speed I to attacker
